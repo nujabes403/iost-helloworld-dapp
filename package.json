@@ -1,19 +1,12 @@
 {
-  "name": "toshi-frontend-boilerplate",
+  "name": "iost-sampledapp-helloworld",
   "version": "0.0.1",
-  "description": "boilerplate",
+  "description": "iost sample dapp hello world",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build:local": "NODE_ENV=local webpack --config webpack.prod.config.js",
-    "build:dev": "NODE_ENV=dev webpack --config webpack.prod.config.js",
-    "build:qa": "NODE_ENV=qa webpack --config webpack.prod.config.js",
-    "build:real": "NODE_ENV=real webpack --config webpack.prod.config.js",
     "local": "NODE_ENV=local node ./frontserver.js webpack.config.js --watch",
-    "real": "NODE_ENV=real node ./frontserver.js webpack.prod.config.js --watch",
-    "start": "NODE_ENV=real node ./frontserver.js webpack.prod.config.js --watch",
-    "start:local": "NODE_ENV=local node ./frontserver.js webpack.prod.config.js --watch"
   },
   "repository": {
     "type": "git"

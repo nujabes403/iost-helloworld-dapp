@@ -20,7 +20,6 @@ class App extends Component<Props> {
 
     return (
       <div className="App">
-        <Header />
         {children}
       </div>
     )

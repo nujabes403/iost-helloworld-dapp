@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { syncHistoryWithStore } from 'react-router-redux'
 
 import App from './App'
+import HelloWorld from 'components/HelloWorld'
 import store from './store'
 
 import './index.scss'
@@ -15,6 +16,7 @@ export const renderRoutes = (rootComponent) => (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={rootComponent}>
+        <IndexRoute component={HelloWorld} />
       </Route>
     </Router>
   </Provider>

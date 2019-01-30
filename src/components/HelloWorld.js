@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 import './HelloWorld.scss'
 
@@ -77,7 +77,12 @@ class HelloWorld extends Component<Props> {
         >
           Hello!
         </button>
-        {isLoading && <p className="HelloWorld__tx">Transaction: {txHash} processing...</p>}
+        {isLoading && (
+          <Fragment>
+            <p className="HelloWorld__tx">Transaction: {txHash} processing...</p>
+            <img className="HelloWorld__loading" src="/static/images/loading.gif" />
+          </Fragment>
+        )}
         {result && (
           <p className="HelloWorld__success">RESULT: {result}</p>
         )}

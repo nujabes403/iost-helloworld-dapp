@@ -21,7 +21,7 @@ class HelloWorld extends Component<Props> {
   }
 
   hello = () => {
-    const contractAddress = 'ContractD7yhgR4BzvaGWfXV7Pnw7Y5GMrZ8etm8UiDJBGMd5RbF'
+    const contractAddress = 'ContractEf4ztxHFP4iUs6Xpomgb2nqfJN3D9K7dfp5H7pV7BVy4'
     const { someone } = this.state
     window.iost.callABI(
       contractAddress,
@@ -29,6 +29,7 @@ class HelloWorld extends Component<Props> {
       [someone]
     )
       .onPending((pending) => {
+        console.log(pending, 'pending')
         this.setState({
           isLoading: true,
           txHash: pending.hash,
